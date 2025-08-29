@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Property Portal Home - Clone</title>
+    <meta name="description" content="A static, educational clone of a property portal homepage UI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container topbar">
+        <div class="brand">
+          <span class="logo-box" aria-hidden="true"></span>
+          <span class="brand-text">HomeFinder</span>
+        </div>
+        <nav class="main-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+          <ul id="nav-list">
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="#">New Launches</a></li>
+            <li><a href="#">Commercial</a></li>
+            <li><a href="#">Mortgage</a></li>
+            <li><a href="#">Agent Finder</a></li>
+          </ul>
+        </nav>
+        <div class="auth">
+          <button type="button" class="btn btn-primary sales-nav-cta" id="sales-nav-cta">📞 Call Sales</button>
+          <a href="#" class="link">Log in</a>
+          <a href="#" class="btn btn-outline">Sign up</a>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1>Find your perfect home</h1>
+          <p class="subtitle">Search thousands of listings for sale and rent across Singapore.</p>
+
+          <div class="search-tabs" role="tablist" aria-label="Search type">
+            <button class="tab active" role="tab" aria-selected="true" data-tab="buy">🏠 Buy</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="rent">🔑 Rent</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="new">🧱 New Launch</button>
+          </div>
+
+          <form class="search-bar" role="search" aria-label="Property search">
+            <div class="field icon-left">
+              <span class="icon">🔍</span>
+              <input id="search-input" type="text" placeholder="Search homes for sale by location, MRT, or project" aria-label="Location" />
+            </div>
+            <div class="field">
+              <label class="sr-only" for="type">Type</label>
+              <select id="type">
+                <option>Any type</option>
+                <option>Condo</option>
+                <option>HDB</option>
+                <option>Landed</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="sr-only" for="min">Min price</label>
+              <select id="min">
+                <option>Min price</option>
+                <option>$200k</option>
+                <option>$400k</option>
+                <option>$600k</option>
+                <option>$800k</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="sr-only" for="max">Max price</label>
+              <select id="max">
+                <option>Max price</option>
+                <option>$800k</option>
+                <option>$1.2m</option>
+                <option>$1.6m</option>
+                <option>$2m+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="sr-only" for="beds">Beds</label>
+              <select id="beds">
+                <option>Any beds</option>
+                <option>1+</option>
+                <option>2+</option>
+                <option>3+</option>
+                <option>4+</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+
+          <div class="chips">
+            <a class="chip" href="#">Orchard</a>
+            <a class="chip" href="#">Bukit Timah</a>
+            <a class="chip" href="#">Jurong East</a>
+            <a class="chip" href="#">Tampines</a>
+            <a class="chip" href="#">Punggol</a>
+          </div>
+          <div class="stats" aria-hidden="true">
+            <div class="stat"><strong>200k+</strong> listings</div>
+            <div class="stat"><strong>8k+</strong> agents</div>
+            <div class="stat"><strong>Every 3 min</strong> new listing</div>
+          </div>
+
+          <div class="hero-cta">
+            <button type="button" class="btn btn-primary" id="sales-hero-cta">📞 Call Sales</button>
+            <span class="cta-note">Have questions? Talk to our team.</span>
+          </div>
+        </div>
+        <div class="hero-carousel" aria-label="Featured visuals">
+          <div class="slides">
+            <div class="slide active">
+              <div class="slide-bg gradient-1"></div>
+              <div class="slide-art" aria-hidden="true">
+                <!-- Minimal skyline illustration -->
+                <svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g1a" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="rgba(224,48,43,0.22)"/>
+                      <stop offset="100%" stop-color="rgba(224,48,43,0.06)"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="0" y="180" width="600" height="140" fill="url(#g1a)"/>
+                  <g fill="#f1f5f9">
+                    <rect x="40" y="120" width="60" height="120" rx="6"/>
+                    <rect x="120" y="90" width="70" height="150" rx="6"/>
+                    <rect x="210" y="140" width="80" height="100" rx="6"/>
+                    <rect x="310" y="100" width="60" height="140" rx="6"/>
+                    <rect x="390" y="130" width="70" height="110" rx="6"/>
+                    <rect x="480" y="80" width="80" height="160" rx="6"/>
+                  </g>
+                  <g stroke="#e2e8f0" stroke-width="4" stroke-linecap="round">
+                    <line x1="60" y1="240" x2="540" y2="240"/>
+                  </g>
+                </svg>
+              </div>
+              <p class="caption">Explore city-fringe new launches</p>
+            </div>
+            <div class="slide">
+              <div class="slide-bg gradient-2"></div>
+              <p class="caption">Find great value HDB homes</p>
+            </div>
+            <div class="slide">
+              <div class="slide-bg gradient-3"></div>
+              <p class="caption">Live close to your MRT</p>
+            </div>
+          </div>
+          <div class="hero-dots" role="tablist" aria-label="Hero slides">
+            <button class="hero-dot active" aria-label="Slide 1" data-hero-slide="0"></button>
+            <button class="hero-dot" aria-label="Slide 2" data-hero-slide="1"></button>
+            <button class="hero-dot" aria-label="Slide 3" data-hero-slide="2"></button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <div class="ribbon">
+      <div class="container ribbon-inner">
+        <span class="ribbon-title">Top searches:</span>
+        <div class="ribbon-tags">
+          <a href="#" class="tag">Freehold condos</a>
+          <a href="#" class="tag">Near MRT</a>
+          <a href="#" class="tag">New launches</a>
+          <a href="#" class="tag">HDB 4-room</a>
+          <a href="#" class="tag">District 9</a>
+          <a href="#" class="tag">City fringe</a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section container">
+        <div class="section-head">
+          <h2>Featured listings</h2>
+          <a href="#" class="link">View all</a>
+        </div>
+
+        <div class="quick-filters chips" role="toolbar" aria-label="Quick filters">
+          <button class="chip" type="button" data-filter="sale">For Sale</button>
+          <button class="chip" type="button" data-filter="rent">For Rent</button>
+          <button class="chip" type="button" data-filter="new">New Launch</button>
+          <button class="chip" type="button" data-filter="near-mrt">Near MRT</button>
+          <button class="chip" type="button" data-filter="freehold">Freehold</button>
+        </div>
+
+        <div class="grid cards" id="cards-grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card-media" aria-hidden="true"><span class="badge sale">For Sale</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-body">
+              <h3 class="price">$1,250,000</h3>
+              <p class="title">2-Bedroom Condo at River Valley</p>
+              <p class="meta">732 sqft • High floor • Freehold</p>
+              <p class="location">River Valley, District 9</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card-media" aria-hidden="true"><span class="badge rent">For Rent</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-body">
+              <h3 class="price">$780,000</h3>
+              <p class="title">Modern 4-Room HDB at Tampines</p>
+              <p class="meta">990 sqft • Renovated • 5 min to MRT</p>
+              <p class="location">Tampines, District 18</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card-media" aria-hidden="true"><span class="badge sale">For Sale</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-body">
+              <h3 class="price">$3,400,000</h3>
+              <p class="title">Spacious Landed Home at Serangoon</p>
+              <p class="meta">3,200 sqft • 5 beds • Car porch</p>
+              <p class="location">Serangoon, District 19</p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <div class="card-media" aria-hidden="true"><span class="badge new">New Launch</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-body">
+              <h3 class="price">$1,050,000</h3>
+              <p class="title">New Launch: Central Residences</p>
+              <p class="meta">581 sqft • 1 bed • Pool, Gym</p>
+              <p class="location">RCR, City Fringe</p>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card">
+            <div class="card-media" aria-hidden="true"><span class="badge sale">For Sale</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-body">
+              <h3 class="price">$2,180,000</h3>
+              <p class="title">Penthouse with Marina Views</p>
+              <p class="meta">1,200 sqft • 3 beds • Balcony</p>
+              <p class="location">Marina Bay, District 1</p>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card">
+            <div class="card-media" aria-hidden="true"><span class="badge rent">For Rent</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-body">
+              <h3 class="price">$650,000</h3>
+              <p class="title">Cozy Apartment near Jurong Gateway</p>
+              <p class="meta">721 sqft • 2 beds • Nearby mall</p>
+              <p class="location">Jurong East, District 22</p>
+            </div>
+          </article>
+        </div>
+        <div class="carousel-controls" aria-hidden="true">
+          <button class="carousel-btn prev" type="button" aria-label="Previous">‹</button>
+          <button class="carousel-btn next" type="button" aria-label="Next">›</button>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Property guides</h2>
+            <a href="#" class="link">See more</a>
+          </div>
+
+          <div class="grid guides">
+            <article class="guide">
+              <h3>How to buy property in Singapore</h3>
+              <p>Eligibility, grants, and key steps explained simply.</p>
+              <a href="#" class="link">Read guide →</a>
+            </article>
+            <article class="guide">
+              <h3>Renting tips for expats</h3>
+              <p>Neighborhoods, budgets, and lease terms to know.</p>
+              <a href="#" class="link">Read guide →</a>
+            </article>
+            <article class="guide">
+              <h3>Mortgage basics and affordability</h3>
+              <p>Plan repayments and compare rates with confidence.</p>
+              <a href="#" class="link">Read guide →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand">
+            <span class="logo-box" aria-hidden="true"></span>
+            <span class="brand-text">HomeFinder</span>
+          </div>
+          <p class="fine-print">UI built for educational purposes. Not affiliated with any brand.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="#">New Launches</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Guides</a></li>
+            <li><a href="#">Market insights</a></li>
+            <li><a href="#">Mortgage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container copyright">
+        <p>© <span id="year"></span> HomeFinder. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Mobile sticky Call Sales bar -->
+    <div class="sales-sticky" id="sales-sticky" aria-hidden="false">
+      <div class="container sales-sticky-inner">
+        <button type="button" class="btn btn-primary btn-sticky" id="sales-sticky-btn">📞 Call Sales</button>
+      </div>
+    </div>
+
+    <!-- Desktop floating side enquiry form -->
+    <aside class="sales-side" id="sales-side" aria-label="Call Sales">
+      <div class="side-header">
+        <div class="side-icon" aria-hidden="true">📞</div>
+        <div class="side-title">Call Sales</div>
+        <button class="side-toggle" id="sales-side-toggle" aria-label="Collapse sales form" aria-expanded="true">›</button>
+      </div>
+      <form id="sales-side-form">
+        <input id="sales-side-name" name="name" type="text" placeholder="Your name" required />
+        <div class="phone-row">
+          <select id="sales-side-country" name="country">
+            <option value="65" selected>+65 SG</option>
+            <option value="60">+60 MY</option>
+            <option value="62">+62 ID</option>
+            <option value="63">+63 PH</option>
+            <option value="66">+66 TH</option>
+            <option value="84">+84 VN</option>
+            <option value="91">+91 IN</option>
+          </select>
+          <input id="sales-side-phone" name="phone" type="tel" inputmode="tel" placeholder="Phone number" required />
+        </div>
+        <textarea id="sales-side-question" name="question" rows="3" placeholder="Ask about districts, PSF trends, or financing..." required></textarea>
+        
+        <button class="btn btn-dark sales-submit" type="submit" id="sales-side-submit">Ask sales</button>
+        <p class="sales-mini-note">We’ll call or text you. No spam.</p>
+      </form>
+    </aside>
+
+    <!-- Toasts (ARIA live region) -->
+    <div id="toast-root" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Sales enquiry widget -->
+    <button class="sales-launcher hidden" id="sales-launcher" aria-haspopup="dialog" aria-controls="sales-dialog">
+      <span class="icon">📞</span>
+      <span class="label">Call Sales</span>
+    </button>
+
+    <div class="sales-overlay" id="sales-overlay" hidden></div>
+    <div class="sales-dialog" id="sales-dialog" role="dialog" aria-modal="true" aria-labelledby="sales-title" hidden>
+      <button class="sales-close" id="sales-close" aria-label="Close">×</button>
+      <div class="sales-header">
+        <div class="sales-icon" aria-hidden="true">📞</div>
+        <h3 id="sales-title">Call Sales</h3>
+      </div>
+      <form id="sales-form">
+        <label class="sr-only" for="sales-name">Name</label>
+        <input id="sales-name" name="name" type="text" placeholder="Your name" required />
+
+        <div class="phone-row">
+          <label class="sr-only" for="sales-country">Country code</label>
+          <select id="sales-country" name="country">
+            <option value="65" selected>+65 SG</option>
+            <option value="60">+60 MY</option>
+            <option value="62">+62 ID</option>
+            <option value="63">+63 PH</option>
+            <option value="66">+66 TH</option>
+            <option value="84">+84 VN</option>
+            <option value="91">+91 IN</option>
+          </select>
+          <label class="sr-only" for="sales-phone">Phone</label>
+          <input id="sales-phone" name="phone" type="tel" inputmode="tel" placeholder="Phone number" required />
+        </div>
+
+        <label class="sr-only" for="sales-question">Question</label>
+        <textarea id="sales-question" name="question" rows="3" placeholder="Ask about district comparison, PSF trends, or financing..." required></textarea>
+
+        
+
+        <button class="btn btn-dark sales-submit" type="submit">Ask sales</button>
+      </form>
+      <p class="sales-disclaimer">We’ll contact you by phone or SMS. No spam.</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
