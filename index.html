@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Deploy bump: trigger Netlify auto-deploy -->
+    <meta name="x-deploy" content="netlify-trigger-1" />
     <title>Property Portal Home - Clone</title>
     <meta name="description" content="A static, educational clone of a property portal homepage UI." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,36 +119,22 @@
             <div class="slide active">
               <div class="slide-bg gradient-1"></div>
               <div class="slide-art" aria-hidden="true">
-                <!-- Minimal skyline illustration -->
-                <svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="g1a" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stop-color="rgba(224,48,43,0.22)"/>
-                      <stop offset="100%" stop-color="rgba(224,48,43,0.06)"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="0" y="180" width="600" height="140" fill="url(#g1a)"/>
-                  <g fill="#f1f5f9">
-                    <rect x="40" y="120" width="60" height="120" rx="6"/>
-                    <rect x="120" y="90" width="70" height="150" rx="6"/>
-                    <rect x="210" y="140" width="80" height="100" rx="6"/>
-                    <rect x="310" y="100" width="60" height="140" rx="6"/>
-                    <rect x="390" y="130" width="70" height="110" rx="6"/>
-                    <rect x="480" y="80" width="80" height="160" rx="6"/>
-                  </g>
-                  <g stroke="#e2e8f0" stroke-width="4" stroke-linecap="round">
-                    <line x1="60" y1="240" x2="540" y2="240"/>
-                  </g>
-                </svg>
+                <img class="hero-img" src="assets/hero-1.svg" alt="" />
               </div>
               <p class="caption">Explore city-fringe new launches</p>
             </div>
             <div class="slide">
               <div class="slide-bg gradient-2"></div>
+              <div class="slide-art" aria-hidden="true">
+                <img class="hero-img" src="assets/hero-2.svg" alt="" />
+              </div>
               <p class="caption">Find great value HDB homes</p>
             </div>
             <div class="slide">
               <div class="slide-bg gradient-3"></div>
+              <div class="slide-art" aria-hidden="true">
+                <img class="hero-img" src="assets/hero-3.svg" alt="" />
+              </div>
               <p class="caption">Live close to your MRT</p>
             </div>
           </div>
@@ -191,7 +179,11 @@
         <div class="grid cards" id="cards-grid">
           <!-- Card 1 -->
           <article class="card">
-            <div class="card-media" aria-hidden="true"><span class="badge sale">For Sale</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-media" aria-hidden="true">
+              <img src="assets/property-1.svg" alt="Listing preview" loading="lazy" />
+              <span class="badge sale">For Sale</span>
+              <button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button>
+            </div>
             <div class="card-body">
               <h3 class="price">$1,250,000</h3>
               <p class="title">2-Bedroom Condo at River Valley</p>
@@ -202,7 +194,11 @@
 
           <!-- Card 2 -->
           <article class="card">
-            <div class="card-media" aria-hidden="true"><span class="badge rent">For Rent</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-media" aria-hidden="true">
+              <img src="assets/property-2.svg" alt="Listing preview" loading="lazy" />
+              <span class="badge rent">For Rent</span>
+              <button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button>
+            </div>
             <div class="card-body">
               <h3 class="price">$780,000</h3>
               <p class="title">Modern 4-Room HDB at Tampines</p>
@@ -213,7 +209,11 @@
 
           <!-- Card 3 -->
           <article class="card">
-            <div class="card-media" aria-hidden="true"><span class="badge sale">For Sale</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-media" aria-hidden="true">
+              <img src="assets/property-3.svg" alt="Listing preview" loading="lazy" />
+              <span class="badge sale">For Sale</span>
+              <button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button>
+            </div>
             <div class="card-body">
               <h3 class="price">$3,400,000</h3>
               <p class="title">Spacious Landed Home at Serangoon</p>
@@ -224,7 +224,11 @@
 
           <!-- Card 4 -->
           <article class="card">
-            <div class="card-media" aria-hidden="true"><span class="badge new">New Launch</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-media" aria-hidden="true">
+              <img src="assets/property-4.svg" alt="Listing preview" loading="lazy" />
+              <span class="badge new">New Launch</span>
+              <button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button>
+            </div>
             <div class="card-body">
               <h3 class="price">$1,050,000</h3>
               <p class="title">New Launch: Central Residences</p>
@@ -235,7 +239,11 @@
 
           <!-- Card 5 -->
           <article class="card">
-            <div class="card-media" aria-hidden="true"><span class="badge sale">For Sale</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-media" aria-hidden="true">
+              <img src="assets/property-5.svg" alt="Listing preview" loading="lazy" />
+              <span class="badge sale">For Sale</span>
+              <button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button>
+            </div>
             <div class="card-body">
               <h3 class="price">$2,180,000</h3>
               <p class="title">Penthouse with Marina Views</p>
@@ -246,7 +254,11 @@
 
           <!-- Card 6 -->
           <article class="card">
-            <div class="card-media" aria-hidden="true"><span class="badge rent">For Rent</span><button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button></div>
+            <div class="card-media" aria-hidden="true">
+              <img src="assets/property-6.svg" alt="Listing preview" loading="lazy" />
+              <span class="badge rent">For Rent</span>
+              <button class="fav-btn" aria-pressed="false" aria-label="Save listing">♡</button>
+            </div>
             <div class="card-body">
               <h3 class="price">$650,000</h3>
               <p class="title">Cozy Apartment near Jurong Gateway</p>
