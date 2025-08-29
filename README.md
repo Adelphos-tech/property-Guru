@@ -18,6 +18,16 @@ python3 -m http.server
 
 ## Deploy to Netlify
 
+## Deploy to GitHub Pages (free, quick)
+
+This repo is already configured to deploy to GitHub Pages via Actions.
+
+- On push to `main`, GitHub will build and publish the site.
+- The URL will be: `https://adelphos-tech.github.io/property-Guru/`
+
+If it doesn’t appear after a minute:
+- Go to GitHub → Repo → Settings → Pages → Ensure “Build and deployment” is set to “GitHub Actions”.
+
 - Drag and drop this folder at https://app.netlify.com/drop
 - Or connect a Git repo; `netlify.toml` already sets `publish = "."`
 
